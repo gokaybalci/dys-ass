@@ -1,10 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/gokaybalci/dys-ass"><img src="https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.png" alt="DYS Killer" width="200"></a>
-  <br>
-  DYS Ass
-  <br>
+  <a href="https://github.com/gokaybalci/dys-ass"><img src="dys-ass.png" alt="DYS Ass" width="200"></a>
   </h1>
   <div align="center">
 <sup>(short for assistance)</sup> 
@@ -29,7 +26,6 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gi)
 
 ## Key Features
 
