@@ -31,10 +31,10 @@
 
 * School Switch - Marks as read every document for every school you are registered as a teacher
   - Goes through all DYS documents one by one.
-* ~~GUI Login Mode for Windows users~~ *(soon)*
+* GUI Login Mode for Windows users *(only supported by Google Chrome)*
 
 
-## How To Use
+## How To Use (This is Linux only. If you're using Windows, go to Download section.)
 
 To clone and run this application, you'll need [Python](https://www.python.org/downloads/). From your command line:
 
@@ -63,8 +63,7 @@ python3 main.py
 
 ## Download
 
-- I will add binaries to [Releases](https://github.com/gokaybalci/dys-ass/releases).
-
+- Go to [DYS-Ass v0.1](https://github.com/gokaybalci/dys-ass/releases) and click assets.
 
 ## Credits
 
