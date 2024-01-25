@@ -57,9 +57,6 @@ echo "e-Devlet Şifresi" >> edevlet.txt
 python3 main.py
 ```
 
-> **Note**
-> If you're using Windows, you can edit edevlet.txt file with Notepad. (*I will add more secure authentication methods in the future.*)
-
 
 ## Download
 
