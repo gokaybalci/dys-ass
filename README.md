@@ -10,7 +10,7 @@
 
 
 
-<h4 align="center">An assistance/accessibility tool for MEB's DYS built with PlayWright.</h4>
+<h4 align="center">An assistance/accessibility tool for reading MEB's DYS documents built with PlayWright.</h4>
 
 <p align="center">
 <a href="https://saythanks.io/to/gokaybalci">
@@ -29,7 +29,7 @@
 
 ## Key Features
 
-* School Switch - Marks as read for every school you are registered as teacher
+* School Switch - Marks as read every document for every school you are registered as a teacher
   - Goes through all DYS documents one by one.
 * ~~GUI Login Mode for Windows users~~ *(soon)*
 
