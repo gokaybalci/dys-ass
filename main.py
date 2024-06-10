@@ -12,7 +12,7 @@ username = login_info[0]
 password = login_info[1]
 
 def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
+    browser = playwright.firefox.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
     page.goto(login_website)
@@ -26,17 +26,25 @@ def run(playwright: Playwright) -> None:
     try:
         while True:
             page.get_by_role("gridcell", name="1", exact=True).click()
-            page.frame_locator("iframe[name=\"gozdenGecirmeEkraniId\"]").get_by_role("button", name="Okudum").click()
+            frame = page.frame_locator("iframe[name=\"gozdenGecirmeEkraniId\"]")
+            frame.locator("button:has-text('Okudum')").wait_for(state='visible')
+            frame.locator("button:has-text('Okudum')").click()
+            page.wait_for_selector("a[class='ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all ui-state-hover ui-state-focus'] span[class='ui-icon ui-icon-closethick']")
+            page.locator("a[class='ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all ui-state-hover ui-state-focus'] span[class='ui-icon ui-icon-closethick']").click()
+            print("Okudum")
     except Exception as e:
         print("Ana okulda DYS yazısı bulunamadı.")
     finally:
-        # Görevlendirme Okuluna Geçme
         try:
-            page.locator('//*[@id="menuForm:roller_tree:1"]/span/span[3]').click();
+            page.locator('//*[@id="menuForm:roller_tree:1"]/span/span[3]').click()
             print("Görevlendirme okuluna geçtim.")
             page.get_by_role("gridcell", name="1", exact=True).click()
             while True:
-                page.frame_locator("iframe[name=\"gozdenGecirmeEkraniId\"]").get_by_role("button", name="Okudum").click()
+                frame = page.frame_locator("iframe[name=\"gozdenGecirmeEkraniId\"]")
+                frame.locator("button:has-text('Okudum')").wait_for(state='visible')
+                frame.locator("button:has-text('Okudum')").click()
+                page.wait_for_selector("a[class='ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all ui-state-hover ui-state-focus'] span[class='ui-icon ui-icon-closethick']")
+                page.locator("a[class='ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all ui-state-hover ui-state-focus'] span[class='ui-icon ui-icon-closethick']").click()
         except Exception as e:
             print("Görevlendirme DYS yazısı bulunamadı.")
 
@@ -47,3 +55,4 @@ def run(playwright: Playwright) -> None:
 
 with sync_playwright() as playwright:
     run(playwright)
+
